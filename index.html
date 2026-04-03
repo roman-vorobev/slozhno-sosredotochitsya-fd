@@ -7,6 +7,7 @@
     <meta name="color-scheme" content="dark light" />
     <title>Сложно сосредоточиться</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
@@ -186,38 +187,36 @@
         </article>
       </section>
       <h3 class="subtitle">А можно в картинках?</h3>
-      <picture class="image-list">
-        <img
-          src="./images/sunset.png"
-          alt="Рисунок заката"
-          class="image image-sunset"
-          loading="lazy"
-        />
-        <img
-          src="./images/ice-cream.png"
-          alt="Рисунок тарелки мороженого"
-          class="image image-ice__cream"
-          loading="lazy"
-        />
-        <img
-          src="./images/tape.png"
-          alt="Рисунок кассеты"
-          class="image image-tape"
-          loading="lazy"
-        />
-        <img
-          src="./images/books.png"
-          alt="Рисунок с книгами"
-          class="image image-books"
-          loading="lazy"
-        />
-        <img
-          src="./images/street.png"
-          alt="Рисунок улицы"
-          class="image image-street"
-          loading="lazy"
-        />
-      </picture>
+      <div class="image-list">
+        <picture class="image image-sunset">
+          <source srcset="./images/sunset.webp" type="image/webp" />
+          <img src="./images/sunset.png" alt="Рисунок заката" loading="lazy" />
+        </picture>
+        <picture class="image image-ice__cream">
+          <source srcset="./images/ice-cream.webp" type="image/webp" />
+          <img
+            src="./images/ice-cream.png"
+            alt="Рисунок тарелки мороженого"
+            loading="lazy"
+          />
+        </picture>
+        <picture class="image image-tape">
+          <source srcset="./images/tape.webp" type="image/webp" />
+          <img src="./images/tape.png" alt="Рисунок кассеты" loading="lazy" />
+        </picture>
+        <picture class="image image-books">
+          <source srcset="./images/books.webp" type="image/webp" />
+          <img
+            src="./images/books.png"
+            alt="Рисунок с книгами"
+            loading="lazy"
+          />
+        </picture>
+        <picture class="image image-street">
+          <source srcset="./images/street.webp" type="image/webp" />
+          <img src="./images/street.png" alt="Рисунок улицы" loading="lazy" />
+        </picture>
+      </div>
     </main>
     <footer class="footer decorated-footer-zone">
       <p class="footer-text">focus</p>

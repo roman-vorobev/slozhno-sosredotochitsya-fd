@@ -2,8 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  margin-top: 0;
-  margin-bottom: 0;
+
   background-color: var(--bg-color);
   background-image: var(--head-bg-image);
   background-position: center;
@@ -15,7 +14,11 @@
 }
 
 .header {
-  margin: 0 2px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+
+  margin: 0 10px;
   margin-block-end: 40px;
   height: 100dvh;
   position: relative;
@@ -51,7 +54,7 @@
   top: 12px;
   margin: 0;
   color: var(--rec-text-color);
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .text-rec:after {
@@ -69,12 +72,13 @@
 
 .header__theme-menu {
   margin: 0;
-  display: flex;
-  justify-content: flex-end;
+  grid-row: 2;
+  grid-column: 3;
+  justify-self: end;
 }
 
 .header__theme-menu-list {
-  margin-top: 65px;
+  margin-block-start: 16px;
 }
 
 .header__theme-menu-item {
@@ -82,8 +86,9 @@
   list-style: none;
   margin-block-start: 10px;
 }
+
 .header__theme-menu-button {
-  min-height: 26px;
+  min-height: 27px;
   min-width: 70px;
   font-size: 18px;
   align-items: center;
@@ -92,7 +97,6 @@
   border: none;
   color: var(--button-text-color);
   text-transform: lowercase;
-  letter-spacing: 0.5px;
 }
 
 .header__theme-menu-button_active {
@@ -118,8 +122,10 @@
 }
 
 .title {
-  margin-bottom: 53px;
-  margin-top: 50px;
+  grid-row: 4;
+  grid-column: 1/3;
+  margin-block-end: 0;
+  margin-block-start: 10px;
   color: var(--big-text-color);
   line-height: 83%;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -127,15 +133,19 @@
 }
 
 .title-text {
+  align-self: flex-start;
+  grid-row: 6;
+  grid-column: 1/4;
   background-color: var(--bg-behind-text-color);
   font-size: 18px;
   line-height: 23.4px;
   color: var(--title-text-color);
   font-weight: bold;
+  margin-block-end: 10px;
 }
 
 main {
-  margin: 2px;
+  margin: 10px;
 }
 
 section {
@@ -211,7 +221,7 @@ section {
   position: relative;
   display: flex;
   justify-content: center;
-
+  margin: 0 10px;
   height: 100dvh;
 }
 
@@ -227,7 +237,7 @@ section {
 .decorated-footer-zone::before {
   content: "";
   position: absolute;
-  left: 2px;
+  left: 0;
   bottom: 9px;
   width: 25px;
   height: 25px;
@@ -239,7 +249,7 @@ section {
 .decorated-footer-zone::after {
   content: "";
   position: absolute;
-  right: 2px;
+  right: 0;
   top: 12px;
   width: 25px;
   height: 25px;
@@ -249,16 +259,12 @@ section {
 }
 
 @media (width >= 768px) {
-  .page {
-    margin: 0 20px;
-  }
-
   .header {
-    margin: 0;
+    margin: 0 20px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(7, 1fr);
-    margin-block-end: 42px;
+    margin-block-end: 60px;
   }
 
   .text-rec {
@@ -266,10 +272,6 @@ section {
     top: 22px;
     right: 28px;
     font-size: 17px;
-  }
-
-  .text-rec::after {
-    margin-right: -19px;
   }
 
   .decorated-zone::before {
@@ -306,10 +308,11 @@ section {
     margin: 0;
     margin-block-start: 15px;
     text-transform: lowercase;
+    overflow: hidden;
   }
 
   .title-text {
-    grid-column: 3 / 8;
+    grid-column: 3 / -1;
     grid-row-start: 6;
     grid-row-end: 6;
     justify-self: end;
@@ -320,7 +323,7 @@ section {
   }
 
   .main-content {
-    margin: 0;
+    margin: 0 20px;
   }
 
   .concetration-problems {
@@ -331,7 +334,6 @@ section {
   }
 
   .concetration-problems-title {
-    margin-block-start: 18px;
     max-width: 30dvi;
     grid-column: 1;
   }
@@ -343,7 +345,7 @@ section {
   }
 
   .reasons-concetration-problems {
-    margin-block-end: 60px;
+    margin-block-end: 79px;
   }
 
   .reasons-concetration-problems-title {
@@ -359,7 +361,6 @@ section {
 
   .concetration-advices-title {
     grid-column: 1;
-    margin-block-start: 19px;
   }
 
   .concetration-advices-description {
@@ -416,14 +417,18 @@ section {
     grid-area: street;
   }
 
+  footer {
+    margin: 0 20px;
+  }
+
   .decorated-footer-zone::before {
     position: absolute;
-    left: 0;
-    bottom: 22px;
+    left: 10px;
+    bottom: 23.5px;
   }
 
   .decorated-footer-zone::after {
-    right: 0;
+    right: 10px;
     top: 16px;
   }
 
@@ -435,20 +440,28 @@ section {
 
 @media (width >= 1024px) {
   .header__theme-menu {
-    margin-block-start: 10px;
+    margin-block-start: 17px;
     grid-column: 3 / 6;
     grid-row: 1;
     align-self: flex-start;
     justify-self: center;
   }
+
   .header__theme-menu-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
     justify-items: center;
+  }
+
+  .header__theme-menu-item {
+    display: initial;
+    margin-block-start: 0;
+  }
+
+  .header__theme-menu-button {
+    place-items: center;
+    padding: 0;
   }
 
   .title {
@@ -457,11 +470,11 @@ section {
 
   .title-text {
     max-width: 48dvi;
-    margin-block-end: 29px;
+    margin-block-end: 25px;
   }
 
   .concetration-problems {
-    margin-block-end: 45px;
+    margin-block-end: 60px;
   }
 
   .concetration-problems-description {
@@ -469,7 +482,7 @@ section {
   }
 
   .reasons-concetration-problems {
-    margin-block-end: 42px;
+    margin-block-end: 60px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
@@ -478,7 +491,7 @@ section {
   .reasons-concetration-problems-title {
     grid-row: 1;
     max-width: 26dvi;
-    margin-block-end: 2px;
+    margin-block-end: 20px;
   }
 
   .reasons-concetration-problems-subtitle {
@@ -497,7 +510,9 @@ section {
     max-width: 63.5dvi;
     justify-self: end;
   }
-
+  .decorated-footer-zone::before {
+    bottom: 22px;
+  }
   .decorated-footer-zone::after {
     top: 18px;
   }
