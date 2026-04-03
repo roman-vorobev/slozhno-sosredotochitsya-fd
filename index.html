@@ -22,7 +22,7 @@
     <script src="./scripts/script.js"></script>
   </head>
   <body class="page">
-    <header class="header decorated-zone">
+    <header class="header decorated-zone header-decorated-zone-position">
       <span class="text-rec">REC</span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
@@ -57,7 +57,7 @@
       </p>
     </header>
     <main class="main-content">
-      <section class="concetration-problems">
+      <section class="content-section concetration-problems-section">
         <h2 class="topic-title concetration-problems-title">
           Почему сосредоточиться так сложно
         </h2>
@@ -92,7 +92,7 @@
           </p>
         </article>
       </section>
-      <section class="reasons-concetration-problems">
+      <section class="content-section reasons-concetration-problems-section">
         <h2 class="topic-title reasons-concetration-problems-title">
           Что снижает концентрацию внимания?
         </h2>
@@ -131,14 +131,14 @@
           </p>
         </article>
       </section>
-      <section class="concetration-advices">
+      <section class="content-section concetration-advices-section">
         <h2 class="topic-title concetration-advices-title">
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
           секунд)
         </h2>
         <article class="concetration-advices-description">
           <h3 class="subtitle">5 простых (на самом деле не очень) советов</h3>
-          <h4 class="advices-subtitle">Представьте небо и облака</h4>
+          <h4 class="subtitle advices-subtitle">Представьте небо и облака</h4>
           <p class="description-text">
             Или листья в ручье. Тут дело в лёгкой медитации, которая помогает
             успокоиться. Ведь часто именно тревожные мысли о сложных задачах как
@@ -149,14 +149,14 @@
             вернуться в настоящий момент, а не волноваться о потенциальных
             проблемах из будущего.
           </p>
-          <h4 class="advices-subtitle">Включите музыку</h4>
+          <h4 class="subtitle advices-subtitle">Включите музыку</h4>
           <p class="description-text">
             Но не любую, и не любимую. Любимая может быть связана с сильными
             положительными эмоциями, которые тоже очень сильно отвлекают.
             Подойдёт тихая, спокойная, умеренно-ритмичная. Можно вообще
             попробовать включить плейлист с «белым шумом» или нейромузыкой.
           </p>
-          <h4 class="advices-subtitle">Прогуляйтесь</h4>
+          <h4 class="subtitle advices-subtitle">Прогуляйтесь</h4>
           <p class="description-text">
             Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
             <a
@@ -170,14 +170,14 @@
             мозг поступит ещё больше кислорода и он будет лучше работать. Но и
             простая двадцатиминутная прогулка — тоже отличный вариант.
           </p>
-          <h4 class="advices-subtitle">Хорошо ешьте</h4>
+          <h4 class="subtitle advices-subtitle">Хорошо ешьте</h4>
           <p class="description-text">
             Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
             которые препятствуют резким скачкам сахара в крови. Например, с
             высоким содержанием клетчатки: овощи, ягоды, бобовые (нут, чечевица,
             фасоль), коричневый рис, хлеб из цельнозерновой пшеницы.
           </p>
-          <h4 class="advices-subtitle">Читайте</h4>
+          <h4 class="subtitle advices-subtitle">Читайте</h4>
           <p class="description-text">
             Настоящие бумажные книги. Это правда помогает с концентрацией: чтобы
             прочитать пост в соцсети, достаточно нескольких минут или даже
@@ -186,56 +186,58 @@
           </p>
         </article>
       </section>
-      <h3 class="subtitle">А можно в картинках?</h3>
-      <div class="image-list">
-        <picture class="image image-sunset">
-          <source srcset="./images/sunset.webp" type="image/webp" />
-          <img
-            src="./images/sunset.png"
-            alt="Рисунок заката"
-            loading="lazy"
-            class="image"
-          />
-        </picture>
-        <picture class="image image-ice__cream">
-          <source srcset="./images/ice-cream.webp" type="image/webp" />
-          <img
-            src="./images/ice-cream.png"
-            alt="Рисунок тарелки мороженого"
-            loading="lazy"
-            class="image"
-          />
-        </picture>
-        <picture class="image image-tape">
-          <source srcset="./images/tape.webp" type="image/webp" />
-          <img
-            src="./images/tape.png"
-            alt="Рисунок кассеты"
-            loading="lazy"
-            class="image"
-          />
-        </picture>
-        <picture class="image image-books">
-          <source srcset="./images/books.webp" type="image/webp" />
-          <img
-            src="./images/books.png"
-            alt="Рисунок с книгами"
-            loading="lazy"
-            class="image"
-          />
-        </picture>
-        <picture class="image image-street">
-          <source srcset="./images/street.webp" type="image/webp" />
-          <img
-            src="./images/street.png"
-            alt="Рисунок улицы"
-            loading="lazy"
-            class="image"
-          />
-        </picture>
-      </div>
+      <section class="content-section images-list-section">
+        <h3 class="subtitle">А можно в картинках?</h3>
+        <div class="image-list">
+          <picture class="image image-sunset">
+            <source srcset="./images/sunset.webp" type="image/webp" />
+            <img
+              src="./images/sunset.png"
+              alt="Рисунок заката"
+              loading="lazy"
+              class="image"
+            />
+          </picture>
+          <picture class="image image-ice__cream">
+            <source srcset="./images/ice-cream.webp" type="image/webp" />
+            <img
+              src="./images/ice-cream.png"
+              alt="Рисунок тарелки мороженого"
+              loading="lazy"
+              class="image"
+            />
+          </picture>
+          <picture class="image image-tape">
+            <source srcset="./images/tape.webp" type="image/webp" />
+            <img
+              src="./images/tape.png"
+              alt="Рисунок кассеты"
+              loading="lazy"
+              class="image"
+            />
+          </picture>
+          <picture class="image image-books">
+            <source srcset="./images/books.webp" type="image/webp" />
+            <img
+              src="./images/books.png"
+              alt="Рисунок с книгами"
+              loading="lazy"
+              class="image"
+            />
+          </picture>
+          <picture class="image image-street">
+            <source srcset="./images/street.webp" type="image/webp" />
+            <img
+              src="./images/street.png"
+              alt="Рисунок улицы"
+              loading="lazy"
+              class="image"
+            />
+          </picture>
+        </div>
+      </section>
     </main>
-    <footer class="footer decorated-footer-zone">
+    <footer class="footer decorated-zone footer-decorated-zone-position">
       <p class="footer-text">focus</p>
     </footer>
   </body>
